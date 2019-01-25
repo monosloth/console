@@ -5,3 +5,4 @@ kernel:
     - provider.config
     - provider.decorator
     - provider.facade
+    - provider.command

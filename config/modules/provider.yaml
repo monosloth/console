@@ -16,3 +16,7 @@ provider.facade:
     - facade.config
     - facade.resolve
     - facade.app
+
+provider.command:
+  module: app.provider
+  class: CommandProvider
