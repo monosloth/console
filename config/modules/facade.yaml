@@ -1,0 +1,27 @@
+facade.cache:
+  module: monosloth.facade
+  class: CacheFacade
+
+facade.config:
+  module: monosloth.facade
+  class: ConfigFacade
+
+facade.resolve:
+  module: monosloth.facade
+  class: ResolveFacade
+
+facade.logger:
+  module: monosloth.facade
+  class: LoggerFacade
+
+facade.app:
+  module: monosloth.facade
+  class: AppFacade
+
+facade.event:
+  module: monosloth.facade
+  class: EventFacade
+
+facade.register:
+  module: monosloth.facade
+  class: RegisterFacade

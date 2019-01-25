@@ -1,0 +1,19 @@
+singleton.app:
+  module: monosloth.singleton
+  class: App
+
+singleton.cache:
+  module: monosloth.singleton
+  class: Cache
+
+singleton.config:
+  module: monosloth.singleton
+  class: Config
+
+singleton.dispatcher:
+  module: monosloth.singleton
+  class: Dispatcher
+
+singleton.event:
+  module: monosloth.singleton
+  class: Event

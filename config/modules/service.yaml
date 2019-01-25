@@ -1,0 +1,3 @@
+parser.key:
+  module: monosloth.service.parser
+  class: KeyParser

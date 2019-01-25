@@ -1,0 +1,18 @@
+provider.config:
+  module: monosloth.provider
+  class: ConfigProvider
+
+provider.decorator:
+  module: monosloth.provider
+  class: DecoratorProvider
+  dependencies:
+    - decorator.inject
+
+provider.facade:
+  module: monosloth.provider
+  class: FacadeProvider
+  dependencies:
+    - facade.cache
+    - facade.config
+    - facade.resolve
+    - facade.app

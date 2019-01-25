@@ -1,0 +1,7 @@
+kernel:
+  module: monosloth
+  class: Kernel
+  dependencies:
+    - provider.config
+    - provider.decorator
+    - provider.facade
