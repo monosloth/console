@@ -1,10 +1,7 @@
-from app.command import OptionalCommand
+from app.command import AbstractCommand
 
 
-class EchoCommand(OptionalCommand):
+class EchoCommand(AbstractCommand):
 
-	def __init__(self, settings):
-		super().__init__(settings, 'echo', 'echo')
-
-	def action(self, a):
+	def invoke(self, args):
 		print('Hello, world!')

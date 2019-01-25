@@ -11,6 +11,9 @@ class Parser(metaclass=MetaSingleton):
         if not hasattr(self, 'parser'):
             self.parser = argparse.ArgumentParser()
 
+    def set_commands(self, commands):
+        self.commands = commands
+
     def attach(self, *args, **kwargs):
         """Bind command argument.
 
@@ -21,4 +24,9 @@ class Parser(metaclass=MetaSingleton):
         self.parser.add_argument(*args, **kwargs)
 
     def parse(self):
-        args = self.parser.parse_args()
+        args = vars(self.parser.parse_args())
+
+        for key, value in self.commands.items():
+            if value['name'] in args or value['alias'] in args:
+                command = resolve(value['module'])
+                command.invoke(args)

@@ -13,6 +13,7 @@ class CommandProvider(AbstractProvider):
 
         with open('./config/commands.yaml') as stream:
             commands = yaml.load(stream)
+            parser.set_commands(commands)
 
             for name, data in commands.items():
                 args = self.__get_args(data)

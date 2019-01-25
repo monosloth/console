@@ -1,13 +1,7 @@
-from app import Settings
+from abc import ABCMeta, abstractmethod
 
+class AbstractCommand(metaclass=ABCMeta):
 
-class AbstractCommand:
-
-    def __init__(self, settings):
-        self.settings = settings
-
-    def action(self, arg):
-        pass
-
-    def attach(self, parser):
+    @abstractmethod
+    def invoke(self, args):
         pass
