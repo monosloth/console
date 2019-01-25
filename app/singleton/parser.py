@@ -24,6 +24,8 @@ class Parser(metaclass=MetaSingleton):
         self.parser.add_argument(*args, **kwargs)
 
     def parse(self):
+        """Invoke the relevant command after parsing the arguments.
+        """
         args = vars(self.parser.parse_args())
 
         for key, value in self.commands.items():
